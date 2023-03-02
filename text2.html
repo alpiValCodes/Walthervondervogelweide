@@ -33,6 +33,12 @@ Seine Werke umfassen Minnelieder und sangs Spruchdichtung, dazu dichtete er in m
 <input type="text"; style="font-size: 40px"> </input>
 <p style="font-size: 30px" id="Wort5"> Wort 5 </p>
 <input type="text"; style="font-size: 40px"> </input>
+<p style="font-size: 30px" id="Wort5"> Wort 6 </p>
+<input type="text"; style="font-size: 40px"> </input>
+<p style="font-size: 30px" id="Wort5"> Wort 7 </p>
+<input type="text"; style="font-size: 40px"> </input>
+<p style="font-size: 30px" id="Wort5"> Wort 8 </p>
+<input type="text"; style="font-size: 40px"> </input>
 <br>
 
 <button id ="c" onclick ="check()"; style="font-size: 20px"> Überprüfen </button>
@@ -85,6 +91,23 @@ function random() {
     losungwortArray.push(randWort5);
     textnew5 = textnew4.replace(randWort5, '_______ ');
 
+    let stelle6 = Math.floor(Math.random() * myArray.length)
+    losungArray.push(stelle6)
+    randWort6 = myArray.splice(stelle6, 1);
+    losungwortArray.push(randWort6);
+    textnew6 = textnew5.replace(randWort6, '_______ ');
+
+    let stelle7 = Math.floor(Math.random() * myArray.length)
+    losungArray.push(stelle7)
+    randWort7 = myArray.splice(stelle7, 1);
+    losungwortArray.push(randWort7);
+    textnew7 = textnew6.replace(randWort7, '_______ ');
+
+    let stelle8 = Math.floor(Math.random() * myArray.length)
+    losungArray.push(stelle8)
+    randWort8 = myArray.splice(stelle8, 1);
+    losungwortArray.push(randWort8);
+    textnew8 = textnew7.replace(randWort8, '_______ ');
     losungArray.sort();
 
     document.getElementById("number").innerHTML = textnew5;
