@@ -1,0 +1,122 @@
+<html>
+<body style="background-color:rgb(214, 206, 187); font-size: 38px;">
+
+<h2><em>Walther von der Vogelweide (Übung 2)</em></h2>
+
+
+<title>
+Walther von der Vogelweide
+</title>
+
+<h3 style="font-size: 20px">Lückentext</h3>
+
+<!--
+<p style="font-size: 20px"> 
+Walther von der Vogelweide wurde um 1170 geboren und starb 1230 wahrscheinlich in Würzburg.<br>
+Im Jahr 1874 wurde ein Fund gemacht, der für die Literatur sehr wichtig war.<br>
+Er gilt als der bedeutendste deutschsprachiger Lyriker des Mittelalters.<br>
+Seine Werke umfassen Minnelieder und sangs Spruchdichtung, dazu dichtete er in mittelhochdeutscher Sprache.<br>
+</p>
+-->
+
+<p style="font-size: 20px" id="number" >  </p>
+<button id ="b" onclick ="random()"; style="font-size: 20px"> Generieren </button>
+
+<br> 
+<p style="font-size: 30px" id="Wort1"> Wort 1 </p>
+<input type="text"; style="font-size: 40px"> </input>
+<p style="font-size: 30px" id="Wort2"> Wort 2 </p> 
+<input type="text"; style="font-size: 40px"> </input>
+<p style="font-size: 30px" id="Wort3"> Wort 3 </p> 
+<input type="text"; style="font-size: 40px"> </input>
+<p style="font-size: 30px" id="Wort4"> Wort 4 </p> 
+<input type="text"; style="font-size: 40px"> </input>
+<p style="font-size: 30px" id="Wort5"> Wort 5 </p>
+<input type="text"; style="font-size: 40px"> </input>
+<p style="font-size: 30px" id="Wort5"> Wort 6 </p>
+<input type="text"; style="font-size: 40px"> </input>
+<p style="font-size: 30px" id="Wort5"> Wort 7 </p>
+<input type="text"; style="font-size: 40px"> </input>
+<p style="font-size: 30px" id="Wort5"> Wort 8 </p>
+<input type="text"; style="font-size: 40px"> </input>
+<br>
+
+<button id ="c" onclick ="check()"; style="font-size: 20px"> Überprüfen </button>
+
+<p style="font-size: 20px" id="losung">  </p>
+
+</body>
+
+
+<script>
+function random() {    
+    let text = "Der Minnesang ist eine ritterliche-höfische Liedkunst und Liebeslyrik. Sie ist eine Form der literarischen Auseinandersetzung der mittelalterlichen Adelsgesellschaft mit Fragen an die Liebe. Die meist aus dem Ritterstand stammenden Sänger bei Hof öffentlich vorgetragen wurden. In Deutschland und auch vor allem in Österreich entstanden die ersten Minnelieder um 1160, ausserdem standen sie in der heimischen Volkssprachlichen Dichtung in der Tradition.";
+    const myArraycopy = text.split(" ");
+    const myArray = text.split(" ");
+
+    losungArray = []
+    losungwortArray = []
+    for(var i=0;i<myArray.length;i++){
+    myArray[i]=myArray[i]+" ";}
+
+    textnew = text.replace(".", '. <br>');
+
+    let stelle = Math.floor(Math.random() * myArray.length)
+    losungArray.push(stelle)
+    randWort = myArray.splice(stelle, 1);
+    losungwortArray.push(randWort);
+    textnew = textnew.replace(randWort, '_______ ');
+    
+    let stelle2 = Math.floor(Math.random() * myArray.length)
+    losungArray.push(stelle2)
+    randWort2 = myArray.splice(stelle2, 1);
+    losungwortArray.push(randWort2);
+    textnew2 = textnew.replace(randWort2, '_______ ');
+
+    let stelle3 = Math.floor(Math.random() * myArray.length)
+    losungArray.push(stelle3)
+    randWort3 = myArray.splice(stelle3, 1);
+    losungwortArray.push(randWort3);
+    textnew3 = textnew2.replace(randWort3, '_______ ');
+
+    let stelle4 = Math.floor(Math.random() * myArray.length)
+    losungArray.push(stelle4)
+    randWort4 = myArray.splice(stelle4, 1);
+    losungwortArray.push(randWort4);
+    textnew4 = textnew3.replace(randWort4, '_______ ');
+
+    let stelle5 = Math.floor(Math.random() * myArray.length)
+    losungArray.push(stelle5)
+    randWort5 = myArray.splice(stelle5, 1);
+    losungwortArray.push(randWort5);
+    textnew5 = textnew4.replace(randWort5, '_______ ');
+
+    let stelle6 = Math.floor(Math.random() * myArray.length)
+    losungArray.push(stelle6)
+    randWort6 = myArray.splice(stelle6, 1);
+    losungwortArray.push(randWort6);
+    textnew6 = textnew5.replace(randWort6, '_______ ');
+
+    let stelle7 = Math.floor(Math.random() * myArray.length)
+    losungArray.push(stelle7)
+    randWort7 = myArray.splice(stelle7, 1);
+    losungwortArray.push(randWort7);
+    textnew7 = textnew6.replace(randWort7, '_______ ');
+
+    let stelle8 = Math.floor(Math.random() * myArray.length)
+    losungArray.push(stelle8)
+    randWort8 = myArray.splice(stelle8, 1);
+    losungwortArray.push(randWort8);
+    textnew8 = textnew7.replace(randWort8, '_______ ');
+    losungArray.sort();
+
+    document.getElementById("number").innerHTML = textnew8;
+    //losungwortArray = myArray;
+}
+
+function check() {
+    document.getElementById("losung").innerHTML = "Der Minnesang ist eine ritterliche-höfische Liedkunst und Liebeslyrik. Sie ist eine Form der literarischen Auseinandersetzung der mittelalterlichen Adelsgesellschaft mit Fragen an die Liebe. Die meist aus dem Ritterstand stammenden Sänger bei Hof öffentlich vorgetragen wurden. In Deutschland und auch vor allem in Österreich entstanden die ersten Minnelieder um 1160, ausserdem standen sie in der heimischen Volkssprachlichen Dichtung in der Tradition.";
+}
+</script>
+
+</html>
